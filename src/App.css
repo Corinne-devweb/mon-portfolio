@@ -28,6 +28,14 @@ border-bottom: 2px solid var(--primary-color) ;
 .logo:hover {
   opacity : 0.7;
 }
+/* HOME PAGE */
+
+hr.custom-hr {
+  border: none; /* Supprime la bordure par défaut */
+  height: 3px; /* Épaisseur de la ligne */
+  background-color: var(--text-primary-emphasis);
+  margin: 1rem 0; /* Espacement autour de la ligne */
+}
 
 
 

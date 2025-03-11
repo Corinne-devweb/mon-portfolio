@@ -7,7 +7,7 @@ function Footer() {
   return (
     <footer className="bg-dark text-white py-1 small">
       <div className="container-fluid footer">
-        <div className="row justify-content-around mx-auto small">
+        <div className="row justify-content-around  mx-auto small">
           {/* Première colonne - 6 lignes d'informations alignées */}
 
           <div className="col-md-3 mb-4 mb-md-0 text-start">
