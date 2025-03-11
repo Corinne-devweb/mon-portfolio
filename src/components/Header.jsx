@@ -1,17 +1,15 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
-const Header = () => {
+function Header() {
   return (
     <nav
-      class="navbar navbar-expand-lg bg-dark border-bottom border-body"
+      className="navbar navbar-expand-lg bg-dark border-bottom border-body"
       data-bs-theme="dark"
     >
-      <div class="container-fluid">
-        <Link class="navbar-brand" to="./pages/Home">
-          JOHN DOE
-        </Link>
+      <div className="container-fluid">
+        <span className="navbar-brand">JOHN DOE</span>
         <button
-          class="navbar-toggler"
+          className="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarNav"
@@ -19,41 +17,69 @@ const Header = () => {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span class="navbar-toggler-icon"></span>
+          <span className="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <Link class="nav-link active" aria-current="page" to="/">
+        <div
+          className="collapse navbar-collapse justify-content-end"
+          id="navbarNav"
+        >
+          <ul className="navbar-nav">
+            <li className="nav-item">
+              <NavLink
+                className={({ isActive }) =>
+                  isActive ? "nav-link active" : "nav-link"
+                }
+                to="/"
+              >
                 HOME
-              </Link>
+              </NavLink>
             </li>
-            <li class="nav-item">
-              <Link class="nav-link" to="/Services">
+            <li className="nav-item">
+              <NavLink
+                className={({ isActive }) =>
+                  isActive ? "nav-link active" : "nav-link"
+                }
+                to="/Services"
+              >
                 SERVICES
-              </Link>
+              </NavLink>
             </li>
-            <li class="nav-item">
-              <Link class="nav-link" to="/Portfolio">
+            <li className="nav-item">
+              <NavLink
+                className={({ isActive }) =>
+                  isActive ? "nav-link active" : "nav-link"
+                }
+                to="/Portfolio"
+              >
                 PORTFOLIO
-              </Link>
+              </NavLink>
             </li>
-            <li class="nav-item">
-              <Link class="nav-link" to="/Contact">
+            <li className="nav-item">
+              <NavLink
+                className={({ isActive }) =>
+                  isActive ? "nav-link active" : "nav-link"
+                }
+                to="/Contact"
+              >
                 CONTACT
-              </Link>
+              </NavLink>
             </li>
-            <li class="nav-item">
-              <Link class="nav-link" to="/Mentionslegales">
+            <li className="nav-item">
+              <NavLink
+                className={({ isActive }) =>
+                  isActive ? "nav-link active" : "nav-link"
+                }
+                to="/Mentionslegales"
+              >
                 MENTIONS LEGALES
-              </Link>
+              </NavLink>
             </li>
           </ul>
         </div>
       </div>
     </nav>
   );
-};
+}
 
 export default Header;
