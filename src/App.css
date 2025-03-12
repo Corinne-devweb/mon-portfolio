@@ -167,6 +167,19 @@ background-color: #efefef;
 box-shadow:0 2px 8px rgba(0, 0, 0, 0.5);
 }
 
+/* PAGE REALISATION - PORTFOLIO */
+
+.portfolio-btn {
+  transition: opacity 0.3s ease;
+}
+
+.portfolio-btn:hover {
+  background-color: #0d6efd !important; /* Maintient la couleur de base */
+  opacity: 0.8; /* Rend plus clair avec transparence */
+  border-color: #0d6efd !important;
+}
+
+
 
 
 
