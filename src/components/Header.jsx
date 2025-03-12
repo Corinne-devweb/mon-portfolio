@@ -28,7 +28,9 @@ function Header() {
             <li className="nav-item">
               <NavLink
                 className={({ isActive }) =>
-                  isActive ? "nav-link active" : "nav-link"
+                  isActive
+                    ? "nav-link active custom-nav-link"
+                    : "nav-link custom-nav-link"
                 }
                 to="/"
               >
@@ -38,7 +40,9 @@ function Header() {
             <li className="nav-item">
               <NavLink
                 className={({ isActive }) =>
-                  isActive ? "nav-link active" : "nav-link"
+                  isActive
+                    ? "nav-link active custom-nav-link"
+                    : "nav-link custom-nav-link"
                 }
                 to="/Services"
               >
@@ -48,7 +52,9 @@ function Header() {
             <li className="nav-item">
               <NavLink
                 className={({ isActive }) =>
-                  isActive ? "nav-link active" : "nav-link"
+                  isActive
+                    ? "nav-link active custom-nav-link"
+                    : "nav-link custom-nav-link"
                 }
                 to="/Portfolio"
               >
@@ -58,7 +64,9 @@ function Header() {
             <li className="nav-item">
               <NavLink
                 className={({ isActive }) =>
-                  isActive ? "nav-link active" : "nav-link"
+                  isActive
+                    ? "nav-link active custom-nav-link"
+                    : "nav-link custom-nav-link"
                 }
                 to="/Contact"
               >
@@ -68,7 +76,9 @@ function Header() {
             <li className="nav-item">
               <NavLink
                 className={({ isActive }) =>
-                  isActive ? "nav-link active" : "nav-link"
+                  isActive
+                    ? "nav-link active custom-nav-link"
+                    : "nav-link custom-nav-link"
                 }
                 to="/Mentionslegales"
               >

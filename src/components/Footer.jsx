@@ -7,11 +7,11 @@ function Footer() {
   return (
     <footer className="bg-dark text-white py-1 small">
       <div className="container-fluid footer">
-        <div className="row justify-content-around  mx-auto small">
+        <div className="row justify-content-around mx-auto small align-items-center">
           {/* Première colonne - 6 lignes d'informations alignées */}
 
-          <div className="col-md-3 mb-4 mb-md-0 text-start">
-            <h5 className="text-uppercase mb-2">John Doe</h5>
+          <div className="col-md-3 mb-4 mb-md-0 text-start justify-content-center">
+            <h7 className="text-uppercase mb-2">John Doe</h7>
             <div className="d-flex flex-column">
               <p className="mb-1">40 rue Laure Diebold </p>
               <p className="mb-1">69009 Lyon, France</p>
@@ -64,8 +64,8 @@ function Footer() {
 
           {/* Deuxième colonne - Liens rapides */}
 
-          <div className="col-md-3 mb-4 mb-md-0 text-start">
-            <h5 className="text-uppercase mb-2">Liens Utiles</h5>
+          <div className="col-md-3 mb-4 mb-md-0 text-start justify-content-center">
+            <h7 className="text-uppercase mb-2">Liens Utiles</h7>
             <ul className="list-unstyled">
               <li className="mb-1">
                 <Link to="/" className="text-white text-decoration-none">
@@ -106,8 +106,8 @@ function Footer() {
 
           {/* Troisième colonne - Mes réalisations */}
 
-          <div className="col-md-3 mb-4 mb-md-0 text-start">
-            <h5 className="text-uppercase mb-2">Mes dernières réalisations</h5>
+          <div className="col-md-3 mb-4 mb-md-0 text-start d-flex flex-column justify-content-center">
+            <h7 className="text-uppercase mb-2">Mes dernières réalisations</h7>
             <ul className="list-unstyled">
               <li className="mb-1">
                 <Link

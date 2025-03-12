@@ -15,7 +15,10 @@
     --danger-color: #dc3545; /* Rouge */
     --light-color: #f8f9fa; /* Gris clair */
     --dark-color: #212529; /* Noir */
-    --turquoise-blue : #40e0d0; /*Bleu turquoise */}
+    --turquoise-blue : #40e0d0; /*Bleu turquoise */
+    --white :white;
+    
+  }
 
 body {
   margin: 0;
@@ -37,7 +40,7 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: var(--dark-color);
   cursor: pointer;
   transition: border-color 0.25s;
 }
