@@ -1,8 +1,14 @@
 import { Container, Row, Col, ProgressBar } from "react-bootstrap";
+import { useState, useEffect } from "react";
 import imageBanner from "../images-portfolio/hero-bg.jpg";
 import photoProfil from "../images-portfolio/john-doe-about.jpg";
 
 function Home() {
+  const [isOpen, setIsOpen] = useState(false);
+  const [profile, setProfile] = useState(null);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
+
   const skills = [
     { name: "HTML.5", percentage: 90, color: "var(--danger-color)" },
     { name: "CSS3", percentage: 80, color: "var(--turquoise-blue)" },
@@ -10,6 +16,40 @@ function Home() {
     { name: "PHP", percentage: 60, color: "var(--success-color)" },
     { name: "REACT", percentage: 50, color: "var(--primary-color)" },
   ];
+
+  useEffect(() => {
+    // Cette fonction ne s'exécute que lorsque la modale est ouverte
+    if (isOpen && !profile) {
+      const fetchGitHubProfile = async () => {
+        setLoading(true);
+        try {
+          const response = await fetch(
+            "https://api.github.com/users/github-johndoe"
+          );
+
+          if (!response.ok) {
+            throw new Error(
+              "Impossible de récupérer les données du profil GitHub"
+            );
+          }
+
+          const data = await response.json();
+          setProfile(data);
+          setError(null);
+        } catch (err) {
+          setError(err.message);
+          console.error("Erreur lors de la récupération du profil:", err);
+        } finally {
+          setLoading(false);
+        }
+      };
+
+      fetchGitHubProfile();
+    }
+  }, [isOpen, profile]);
+
+  const openModal = () => setIsOpen(true);
+  const closeModal = () => setIsOpen(false);
 
   return (
     <div className="home-page">
@@ -27,6 +67,10 @@ function Home() {
           <div className="text-center text-white" style={{ zIndex: 2 }}>
             <h1 className="display-3 fw-bold">Bonjour, je suis John Doe</h1>
             <h2 className="display-6">Développeur Web full stack</h2>
+            {/* Bouton "En savoir plus" ajouté sous le titre h2 */}
+            <button onClick={openModal} className="savoir-plus-btn mt-3">
+              En savoir plus
+            </button>
           </div>
         </div>
         {/* Overlay sombre pour améliorer la lisibilité du texte */}
@@ -39,6 +83,62 @@ function Home() {
             zIndex: 1,
           }}
         />
+
+        {/* Fenêtre modale */}
+        {isOpen && (
+          <div className="modal-overlay">
+            <div className="modal-content">
+              <button onClick={closeModal} className="modal-close-btn">
+                &times;
+              </button>
+
+              <h3>Profil GitHub de John Doe</h3>
+
+              {loading && <p>Chargement des données...</p>}
+
+              {error && <p className="error">Erreur: {error}</p>}
+
+              {profile && (
+                <div className="github-profile">
+                  <img
+                    src={profile.avatar_url}
+                    alt="Avatar GitHub"
+                    className="github-avatar"
+                  />
+                  <h4>{profile.name || profile.login}</h4>
+                  <p className="github-bio">
+                    {profile.bio || "Aucune biographie disponible"}
+                  </p>
+                  <div className="github-stats">
+                    <div className="stat">
+                      <strong>Repos:</strong> {profile.public_repos}
+                    </div>
+                    <div className="stat">
+                      <strong>Followers:</strong> {profile.followers}
+                    </div>
+                    <div className="stat">
+                      <strong>Following:</strong> {profile.following}
+                    </div>
+                  </div>
+                  <a
+                    href={profile.html_url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="github-link"
+                  >
+                    Voir le profil complet
+                  </a>
+                  <button
+                    onClick={closeModal}
+                    className="modal-footer-close-btn mt-4 text-white"
+                  >
+                    Fermer
+                  </button>
+                </div>
+              )}
+            </div>
+          </div>
+        )}
       </div>
 
       {/* Section avec deux blocs côte à côte */}
