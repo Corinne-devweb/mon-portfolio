@@ -32,9 +32,10 @@ function Contact() {
         </Row>
 
         {/* Section avec deux blocs côte à côte */}
-        <Row className="justify-content-center">
+
+        <Row className="justify-content-center contact-container">
           {/* Bloc de gauche : Formulaire */}
-          <Col md={5} className="mb-4 mb-md-0">
+          <Col md={5} className="mb-4 mb-md-0 mt-1 pt-2">
             <div className="form-section">
               <h5 className="text-start mb-3">Formulaire de contact</h5>
               <hr
@@ -47,42 +48,57 @@ function Contact() {
                 }}
               />
               <form>
-                <div className="mb-3">
-                  <label htmlFor="name" className="form-label">
-                    Nom
-                  </label>
+                <div className="mb-2 mt-4">
                   <input
                     type="text"
                     className="form-control"
                     id="name"
                     placeholder="Votre nom"
+                    required
                   />
                 </div>
-                <div className="mb-3">
-                  <label htmlFor="email" className="form-label">
-                    Email
-                  </label>
+                <div className="mb-2">
                   <input
                     type="email"
                     className="form-control"
                     id="email"
-                    placeholder="Votre email"
+                    placeholder="Votre adresse email"
+                    required
+                  />
+                </div>
+                <div className="mb-2">
+                  <input
+                    type="text"
+                    className="form-control"
+                    id="phone"
+                    placeholder="Votre numéro de téléphone"
+                    required
+                  />
+                </div>
+                <div className="mb-2">
+                  <input
+                    type="text"
+                    className="form-control"
+                    id="subject"
+                    placeholder="Sujet"
+                    required
                   />
                 </div>
                 <div className="mb-3">
-                  <label htmlFor="message" className="form-label">
-                    Message
-                  </label>
                   <textarea
                     className="form-control"
                     id="message"
-                    rows="5"
+                    rows="10"
                     placeholder="Votre message"
+                    required
                   ></textarea>
+                  <button
+                    type="submit"
+                    className="btn btn-primary mt-3 btn-contact"
+                  >
+                    Envoyer
+                  </button>
                 </div>
-                <button type="submit" className="btn btn-primary">
-                  Envoyer
-                </button>
               </form>
             </div>
           </Col>
@@ -90,7 +106,7 @@ function Contact() {
           {/* Bloc de droite : Mes Coordonnées */}
           <Col md={5}>
             <div className="contact-section">
-              <h5 className="text-start mb-3">Mes coordonnées</h5>
+              <h5 className="text-start mb-3 mt-1 pt-2">Mes coordonnées</h5>
               <hr
                 className="custom-hr mb-4"
                 style={{
@@ -102,9 +118,12 @@ function Contact() {
               />
               <div className="text-center">
                 <div className="adress text-start">
+                  <p className="d-flex align-items-center mb-1 mt-4">
+                    <span className="name">John Doe</span>
+                  </p>
                   <p className="d-flex align-items-center mb-1">
                     <img className="icones me-2" src={map} alt="carte-papier" />
-                    John Doe
+                    40 rue Laure Diebold
                   </p>
                   <p className="d-flex align-items-center mb-1">
                     <img
@@ -112,7 +131,7 @@ function Contact() {
                       src={pointeur}
                       alt="image-pointeur"
                     />
-                    40 rue Laure Diebold
+                    69009 Lyon, France
                   </p>
                   <p className="d-flex align-items-center mb-1">
                     <img
@@ -122,7 +141,7 @@ function Contact() {
                     />
                     10 20 30 40 50
                   </p>
-                  <p className="d-flex align-items-center mb-3">
+                  <p className="d-flex align-items-center mb-2">
                     <img className="icones me-2" src={email} alt="email" />
                     john.doe@gmail.com
                   </p>
