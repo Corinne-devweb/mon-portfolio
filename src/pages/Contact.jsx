@@ -122,14 +122,18 @@ function Contact() {
                     <span className="name">John Doe</span>
                   </p>
                   <p className="d-flex align-items-center mb-1">
-                    <img className="icones me-2" src={map} alt="carte-papier" />
+                    <img
+                      className="icones me-2"
+                      src={map}
+                      alt="Icône de carte routière en papier"
+                    />
                     40 rue Laure Diebold
                   </p>
                   <p className="d-flex align-items-center mb-1">
                     <img
                       className="icones me-2"
                       src={pointeur}
-                      alt="image-pointeur"
+                      alt="Icône d'un pointeur de localisation sur une carte"
                     />
                     69009 Lyon, France
                   </p>
@@ -137,12 +141,16 @@ function Contact() {
                     <img
                       className="icones me-2"
                       src={mobile}
-                      alt="image-mobile"
+                      alt="Icône d'un téléphone mobile"
                     />
                     10 20 30 40 50
                   </p>
                   <p className="d-flex align-items-center mb-2">
-                    <img className="icones me-2" src={email} alt="email" />
+                    <img
+                      className="icones me-2"
+                      src={email}
+                      alt="Icône d'email"
+                    />
                     john.doe@gmail.com
                   </p>
                 </div>
