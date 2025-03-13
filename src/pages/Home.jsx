@@ -1,5 +1,6 @@
 import { Container, Row, Col, ProgressBar } from "react-bootstrap";
 import { useState, useEffect } from "react";
+import "../styles/Home.css";
 import imageBanner from "../images-portfolio/hero-bg.jpg";
 import photoProfil from "../images-portfolio/john-doe-about.jpg";
 

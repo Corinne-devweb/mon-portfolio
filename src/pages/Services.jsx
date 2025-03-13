@@ -1,4 +1,5 @@
 import { Container, Row } from "react-bootstrap";
+import "../styles/Services.css";
 import imageServices from "../images-portfolio/banner.jpg";
 import brush from "../images-portfolio/brush.svg";
 import brackets from "../images-portfolio/brackets.svg";
@@ -41,9 +42,9 @@ function Services() {
                 width: "120%",
                 maxWidth: "600px",
                 border: "0",
-                height: "3px",
-                backgroundColor: "var(--primary-color)",
+                height: "4px",
                 marginLeft: "-10%",
+                backgroundColor: "darkblue",
               }}
             />
           </div>

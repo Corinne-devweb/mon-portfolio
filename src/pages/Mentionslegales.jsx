@@ -1,4 +1,5 @@
 import { Container, Row, Col } from "react-bootstrap";
+import "../styles/Mentionslegales.css";
 import mobile from "../images-portfolio/mobile.svg";
 import pointeur from "../images-portfolio/pointeur.svg";
 import map from "../images-portfolio/map.svg";
@@ -14,14 +15,14 @@ function Mentionslegales() {
           <div className="titres mb-5 text-center">
             <h1 className="mb-3">Mentions légales</h1>
             <hr
-              className="mx-auto custom-hr"
+              className="mx-auto"
               style={{
-                width: "120%",
+                width: "110%",
                 maxWidth: "600px",
                 border: "0",
-                height: "3px",
-                backgroundColor: "black",
+                height: "4px",
                 marginLeft: "-10%",
+                backgroundColor: "darkblue",
               }}
             />
           </div>
@@ -117,8 +118,9 @@ function Mentionslegales() {
                 <p className="d-flex align-items-center mb-1 text-start">
                   <a
                     href="https://www.alwaysdata.com/fr/"
-                    rel="noopener noreferrer"
                     className="d-flex align-items-center"
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
                     <img
                       className="me-2"
@@ -162,13 +164,21 @@ function Mentionslegales() {
                 <p className="fst-italic">
                   Les images utilisées sur ce site sont libres de droits et ont
                   été obtenues sur le site {""}
-                  <a href="https://pixabay.com/fr/" rel="noopener noreferrer">
+                  <a
+                    href="https://pixabay.com/fr/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     Pixabay
                   </a>
                 </p>
                 <p className="fst-italic">
                   La favicon de ce site a été fournie par {""}
-                  <a href="https://www.flaticon.com/" rel="noopener noreferrer">
+                  <a
+                    href="https://www.flaticon.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     John doe Icons erstellt von Freepik - Flaticon
                   </a>
                 </p>

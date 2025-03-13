@@ -1,4 +1,5 @@
 import { Container, Row, Col } from "react-bootstrap";
+import "../styles/Portfolio.css";
 import imageServices from "../images-portfolio/banner.jpg";
 import freshFood from "../images-portfolio/fresh-food.jpg";
 import restaurantAkira from "../images-portfolio/restaurant-japonais.jpg";
@@ -48,8 +49,8 @@ function Portfolio() {
                 width: "120%",
                 maxWidth: "600px",
                 border: "0",
-                height: "3px",
-                backgroundColor: "var(--primary-color)",
+                height: "4px",
+                backgroundColor: "darkblue",
                 marginLeft: "-10%",
               }}
             />
