@@ -179,10 +179,46 @@ box-shadow:0 2px 8px rgba(0, 0, 0, 0.5);
   border-color: #0d6efd !important;
 }
 
+/* PAGE CONTACT */
+
+.icones{
+  width: 16px;
+  height:16px;
+}
 
 
+.btn-contact {
+  transition: opacity 0.3s ease;
+}
+
+.btn-contact:hover {
+  background-color: #0d6efd !important; /* Maintient la couleur de base */
+  opacity: 0.8; /* Rend plus clair avec transparence */
+  border-color: #0d6efd !important;
+}
 
 
+.contact-container {
+  box-shadow: 
+  -10px 10px 10px rgba(0, 0, 0, 0.1), /* Ombre à gauche */
+  10px 10px 10px rgba(0, 0, 0, 0.1),  /* Ombre à droite */
+  0 10px 10px rgba(0, 0, 0, 0.1);    /* Ombre en bas */
+  border-radius: 5px;
+
+}
+
+.name {
+
+  font-weight: 600;
+}
+
+.img-fluid {
+
+width : 100%;
+height : auto;
+margin-bottom : 20px;
+
+}
 
 @keyframes logo-spin {
   from {
