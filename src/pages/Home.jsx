@@ -19,7 +19,6 @@ function Home() {
   ];
 
   useEffect(() => {
-    // Cette fonction ne s'exécute que lorsque la modale est ouverte
     if (isOpen && !profile) {
       const fetchGitHubProfile = async () => {
         setLoading(true);
@@ -54,6 +53,7 @@ function Home() {
 
   return (
     <div className="home-page">
+      {/* Banner section */}
       <div
         className="banner-section position-relative text-white "
         style={{
@@ -68,13 +68,13 @@ function Home() {
           <div className="text-center text-white" style={{ zIndex: 2 }}>
             <h1 className="display-3 fw-bold">Bonjour, je suis John Doe</h1>
             <h2 className="display-6">Développeur Web full stack</h2>
-            {/* Bouton "En savoir plus" ajouté sous le titre h2 */}
+            {/* Button "En savoir plus" */}
             <button onClick={openModal} className="savoir-plus-btn mt-3">
               En savoir plus
             </button>
           </div>
         </div>
-        {/* Overlay sombre pour améliorer la lisibilité du texte */}
+
         <div
           className="overlay position-absolute w-100 h-100"
           style={{
@@ -85,7 +85,7 @@ function Home() {
           }}
         />
 
-        {/* Fenêtre modale */}
+        {/* Modal window */}
         {isOpen && (
           <div className="modal-overlay">
             <div className="modal-content">
@@ -142,10 +142,10 @@ function Home() {
         )}
       </div>
 
-      {/* Section avec deux blocs côte à côte */}
+      {/* Section with two blocks */}
       <Container className="py-5">
         <Row className="justify-content-center">
-          {/* Bloc À Propos */}
+          {/* First block : À Propos */}
           <Col md={5} className="mb-4 mb-md-0">
             <div className="about-section">
               <h3 className="text-start mb-3">A propos</h3>
@@ -178,7 +178,7 @@ function Home() {
             </div>
           </Col>
 
-          {/* Bloc Mes Compétences */}
+          {/* Second block : Mes Compétences */}
           <Col md={5}>
             <div className="skills-section">
               <h3 className="text-start mb-3">Mes compétences</h3>

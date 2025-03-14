@@ -10,14 +10,13 @@ function Mentionslegales() {
   return (
     <main className="contact-page">
       <Container className="pt-5 pb-4">
-        {/* Titre, sous-titre et trait */}
         <Row className="justify-content-center">
           <div className="titres mb-5 text-center">
             <h1 className="mb-3">Mentions légales</h1>
             <hr
               className="mx-auto"
               style={{
-                width: "110%",
+                width: "40%",
                 maxWidth: "600px",
                 border: "0",
                 height: "4px",
@@ -28,7 +27,7 @@ function Mentionslegales() {
           </div>
         </Row>
 
-        {/* Menu accordeon */}
+        {/* Accordion menu */}
 
         <div className="accordion" id="accordionExample">
           <div className="accordion-item">
@@ -111,7 +110,9 @@ function Mentionslegales() {
               data-bs-parent="#accordionExample"
             >
               <div className="accordion-body text-start">
-                <h3 className="d-flex align-items-center mb-1">alwaysdata</h3>
+                <h3 className="d-flex align-items-center mb-1">
+                  <strong>alwaysdata</strong>
+                </h3>
                 <p className="d-flex align-items-center mb-1">
                   91 Rue du Faubourg Saint-Honoré, 75008 Paris
                 </p>
@@ -153,7 +154,9 @@ function Mentionslegales() {
               data-bs-parent="#accordionExample"
             >
               <div className="accordion-body text-start">
-                <h3>Crédits</h3>
+                <h3>
+                  <strong>Crédits</strong>
+                </h3>
                 <p>
                   Ce site a été réalisé par John Doe, étudiant au{" "}
                   <span className="centre-lien">

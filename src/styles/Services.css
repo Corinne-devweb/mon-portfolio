@@ -1,0 +1,14 @@
+/* SERVICES PAGE */
+
+.card-title {
+  font-weight: bold;
+  }
+     
+.crochets{
+  transform: rotate(90deg);
+  }
+    
+.card:hover{
+  background-color: #efefef;
+  box-shadow:0 2px 8px rgba(0, 0, 0, 0.5);
+  }

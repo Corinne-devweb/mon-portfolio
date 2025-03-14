@@ -6,8 +6,8 @@
   }
 
   :root {
-    /* les couleurs principales */
-    --primary-color: #0d6efd; /* Bleu Bootstrap */
+    /* main colors */
+    --primary-color: #0d6efd;
     --text-primary-emphasis: #022252;
     --secondary-color: #6c757d;
     --success-color: #198754;
