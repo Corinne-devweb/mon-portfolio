@@ -1,4 +1,5 @@
 import { Container, Row, Col } from "react-bootstrap";
+import "../styles/Portfolio.css";
 import imageServices from "../images-portfolio/banner.jpg";
 import freshFood from "../images-portfolio/fresh-food.jpg";
 import restaurantAkira from "../images-portfolio/restaurant-japonais.jpg";
@@ -34,7 +35,7 @@ function Portfolio() {
         }}
       ></section>
 
-      {/* Contenu sous la bannière */}
+      {/* Under banner content */}
       <Container className="pt-4 pb-4">
         <Row className="justify-content-center">
           <div className="titres mb-5 text-center">
@@ -45,19 +46,19 @@ function Portfolio() {
             <hr
               className="mx-auto"
               style={{
-                width: "120%",
+                width: "30%",
                 maxWidth: "600px",
                 border: "0",
-                height: "3px",
-                backgroundColor: "var(--primary-color)",
+                height: "4px",
+                backgroundColor: "darkblue",
                 marginLeft: "-10%",
               }}
             />
           </div>
 
-          {/* Grille de cartes */}
+          {/* Cards grid */}
           <Row>
-            {/* Carte 1 */}
+            {/* Card 1 */}
             <Col md={4} className="mb-4">
               <div className="card h-100 d-flex flex-column">
                 <img
@@ -88,7 +89,7 @@ function Portfolio() {
               </div>
             </Col>
 
-            {/* Carte 2 */}
+            {/* Card 2 */}
             <Col md={4} className="mb-4">
               <div className="card h-100 d-flex flex-column">
                 <img
@@ -119,7 +120,7 @@ function Portfolio() {
               </div>
             </Col>
 
-            {/* Carte 3 */}
+            {/* Card 3 */}
             <Col md={4} className="mb-4">
               <div className="card h-100 d-flex flex-column">
                 <img
@@ -150,7 +151,7 @@ function Portfolio() {
               </div>
             </Col>
 
-            {/* Carte 4 */}
+            {/* Card 4 */}
             <Col md={4} className="mb-4">
               <div className="card h-100 d-flex flex-column">
                 <img
@@ -181,7 +182,7 @@ function Portfolio() {
               </div>
             </Col>
 
-            {/* Carte 5 */}
+            {/* Card 5 */}
             <Col md={4} className="mb-4">
               <div className="card h-100 d-flex flex-column">
                 <img
@@ -210,7 +211,7 @@ function Portfolio() {
               </div>
             </Col>
 
-            {/* Carte 6 */}
+            {/* Card 6 */}
             <Col md={4} className="mb-4">
               <div className="card h-100 d-flex flex-column">
                 <img

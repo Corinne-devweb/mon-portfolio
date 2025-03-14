@@ -1,4 +1,5 @@
 import { Container, Row, Col } from "react-bootstrap";
+import "../styles/Mentionslegales.css";
 import mobile from "../images-portfolio/mobile.svg";
 import pointeur from "../images-portfolio/pointeur.svg";
 import map from "../images-portfolio/map.svg";
@@ -9,25 +10,24 @@ function Mentionslegales() {
   return (
     <main className="contact-page">
       <Container className="pt-5 pb-4">
-        {/* Titre, sous-titre et trait */}
         <Row className="justify-content-center">
           <div className="titres mb-5 text-center">
             <h1 className="mb-3">Mentions légales</h1>
             <hr
-              className="mx-auto custom-hr"
+              className="mx-auto"
               style={{
-                width: "120%",
+                width: "40%",
                 maxWidth: "600px",
                 border: "0",
-                height: "3px",
-                backgroundColor: "black",
+                height: "4px",
                 marginLeft: "-10%",
+                backgroundColor: "darkblue",
               }}
             />
           </div>
         </Row>
 
-        {/* Menu accordeon */}
+        {/* Accordion menu */}
 
         <div className="accordion" id="accordionExample">
           <div className="accordion-item">
@@ -110,15 +110,18 @@ function Mentionslegales() {
               data-bs-parent="#accordionExample"
             >
               <div className="accordion-body text-start">
-                <h3 className="d-flex align-items-center mb-1">alwaysdata</h3>
+                <h3 className="d-flex align-items-center mb-1">
+                  <strong>alwaysdata</strong>
+                </h3>
                 <p className="d-flex align-items-center mb-1">
                   91 Rue du Faubourg Saint-Honoré, 75008 Paris
                 </p>
                 <p className="d-flex align-items-center mb-1 text-start">
                   <a
                     href="https://www.alwaysdata.com/fr/"
-                    rel="noopener noreferrer"
                     className="d-flex align-items-center"
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
                     <img
                       className="me-2"
@@ -151,7 +154,9 @@ function Mentionslegales() {
               data-bs-parent="#accordionExample"
             >
               <div className="accordion-body text-start">
-                <h3>Crédits</h3>
+                <h3>
+                  <strong>Crédits</strong>
+                </h3>
                 <p>
                   Ce site a été réalisé par John Doe, étudiant au{" "}
                   <span className="centre-lien">
@@ -162,13 +167,21 @@ function Mentionslegales() {
                 <p className="fst-italic">
                   Les images utilisées sur ce site sont libres de droits et ont
                   été obtenues sur le site {""}
-                  <a href="https://pixabay.com/fr/" rel="noopener noreferrer">
+                  <a
+                    href="https://pixabay.com/fr/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     Pixabay
                   </a>
                 </p>
                 <p className="fst-italic">
                   La favicon de ce site a été fournie par {""}
-                  <a href="https://www.flaticon.com/" rel="noopener noreferrer">
+                  <a
+                    href="https://www.flaticon.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     John doe Icons erstellt von Freepik - Flaticon
                   </a>
                 </p>

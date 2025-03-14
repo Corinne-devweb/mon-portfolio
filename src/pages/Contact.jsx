@@ -1,4 +1,5 @@
 import { Container, Row, Col } from "react-bootstrap";
+import "../styles/Contact.css";
 import carte from "../images-portfolio/carte.png";
 import mobile from "../images-portfolio/mobile.svg";
 import pointeur from "../images-portfolio/pointeur.svg";
@@ -9,7 +10,6 @@ function Contact() {
   return (
     <main className="contact-page">
       <Container className="pt-4 pb-4">
-        {/* Titre, sous-titre et trait */}
         <Row className="justify-content-center">
           <div className="titres mb-5 text-center">
             <h1 className="mb-3">Contact</h1>
@@ -20,31 +20,31 @@ function Contact() {
             <hr
               className="mx-auto"
               style={{
-                width: "120%",
+                width: "100%",
                 maxWidth: "600px",
                 border: "0",
-                height: "3px",
-                backgroundColor: "var(--primary-color)",
+                height: "4px",
+                backgroundColor: "darkblue",
                 marginLeft: "-10%",
               }}
             />
           </div>
         </Row>
 
-        {/* Section avec deux blocs côte à côte */}
+        {/* Section with two blocks */}
 
         <Row className="justify-content-center contact-container">
-          {/* Bloc de gauche : Formulaire */}
+          {/* Left block : "Formulaire" */}
           <Col md={5} className="mb-4 mb-md-0 mt-1 pt-2">
             <div className="form-section">
               <h5 className="text-start mb-3">Formulaire de contact</h5>
               <hr
-                className="custom-hr mb-4"
+                className="mb-4"
                 style={{
                   width: "100%",
                   border: "0",
                   height: "2px",
-                  backgroundColor: "var(--primary-color)",
+                  backgroundColor: "darkblue",
                 }}
               />
               <form>
@@ -103,17 +103,17 @@ function Contact() {
             </div>
           </Col>
 
-          {/* Bloc de droite : Mes Coordonnées */}
+          {/* Right block : Mes Coordonnées */}
           <Col md={5}>
             <div className="contact-section">
               <h5 className="text-start mb-3 mt-1 pt-2">Mes coordonnées</h5>
               <hr
-                className="custom-hr mb-4"
+                className="mb-4"
                 style={{
                   width: "100%",
                   border: "0",
                   height: "2px",
-                  backgroundColor: "var(--primary-color)",
+                  backgroundColor: "darkblue",
                 }}
               />
               <div className="text-center">

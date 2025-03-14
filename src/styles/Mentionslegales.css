@@ -1,0 +1,12 @@
+
+/* LEGAL INFORMATIONS */
+
+h3 {
+  font-weight: bolder;
+  }
+  
+.centre-lien {
+  color : var(--primary-color);
+  text-decoration: underline;
+  }
+  

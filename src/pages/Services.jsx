@@ -1,4 +1,5 @@
 import { Container, Row } from "react-bootstrap";
+import "../styles/Services.css";
 import imageServices from "../images-portfolio/banner.jpg";
 import brush from "../images-portfolio/brush.svg";
 import brackets from "../images-portfolio/brackets.svg";
@@ -27,7 +28,7 @@ function Services() {
         }}
       ></section>
 
-      {/* Contenu sous la bannière */}
+      {/* Under banner content */}
       <Container className="pt-4 pb-4">
         <Row className="justify-content-center">
           <div className="titres mb-5 text-center">
@@ -38,17 +39,17 @@ function Services() {
             <hr
               className="mx-auto"
               style={{
-                width: "120%",
+                width: "45%",
                 maxWidth: "600px",
                 border: "0",
-                height: "3px",
-                backgroundColor: "var(--primary-color)",
+                height: "4px",
                 marginLeft: "-10%",
+                backgroundColor: "darkblue",
               }}
             />
           </div>
 
-          {/* Les cards */}
+          {/* Cards section */}
           <div className="card-group">
             <div className="card">
               <img

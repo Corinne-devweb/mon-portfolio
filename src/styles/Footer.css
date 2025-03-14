@@ -1,0 +1,25 @@
+/* FOOTER */
+
+  .social-icon {
+    width: 24px;
+    height : 24 px;
+    filter: brightness(0) invert(0.5);
+    transition: filter 0.3s ease; 
+  }
+   
+  .social-icon:hover {
+    filter: brightness(0) invert(1);
+  }
+        
+  .link-hover:hover {
+    font-weight: 900;
+  }
+   
+  h7 {
+    font-weight: bold;
+  }
+   
+  h6 {
+    letter-spacing: 0.5px;
+  }
+   
